@@ -94,3 +94,9 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
+$db_config_file = dirname(__FILE__) . "/database/live.php";
+if (file_exists($db_config_file))
+    require $db_config_file;
+else
+    throw new Exception("Database Config not found! Please create /application/config/database/live.php");

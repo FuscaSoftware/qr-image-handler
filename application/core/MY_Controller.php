@@ -76,8 +76,6 @@ class MY_Controller extends CI_Controller
 
         $this->server_name = $_SERVER['SERVER_NAME'];
 
-        $this->config->set_item('language', 'german');/* y this? */
-
         /* with setting "use_ldap" in config you can disable to connect to ldap, e.g. if you ar are working on a localhost */
         $this->auth_ldap_status = (!is_null($this->config->item('use_ldap')))? $this->config->item('use_ldap') : $this->auth_ldap_status;
 
